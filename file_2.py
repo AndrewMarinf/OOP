@@ -102,3 +102,40 @@ my_list = [
 
 for i in my_list:
     setattr(Empty,i[0],i[1])
+
+
+# Ниже определен пустой класс SuperHero. Ваша задача  создать два ЭК и сохранить их в переменные batman и superman
+# Для ЭК, хранящегося в переменной batman, необходимо создать
+# атрибут can_fly со значением False
+# атрибут damage со значением 175
+# Для ЭК, хранящегося в переменной superman, необходимо создать
+# атрибут can_fly со значением True
+# атрибут damage со значением 285
+# атрибут alter_ego со значением 'Кларк Кент'
+
+class SuperHero:
+    pass
+
+class SuperHero:
+    pass
+
+batman = SuperHero()
+batman.can_fly = False
+batman.damage = 175
+
+superman = SuperHero()
+superman.can_fly = True
+superman.damage = 285
+superman.alter_ego = 'Кларк Кент'
+
+# Имеется пустой класс Config. Ваша задача написать функцию create_instance, которая принимает на вход положительное число N. Функция должна создать ЭК , создать у него N атрибутов и вернуть в качестве ответа полученный ЭК.
+# Что касается атрибутов, они должны называться определенным образом и иметь определенное значение. В общем виде это можно записать так
+# attribute<n> = "value<n>"
+# где n — порядковый номер атрибута. Значение атрибута - строковый тип
+class Config:     
+    pass
+def create_instance(n: int) -> Config:
+    obj = Config() # объявление экземпляра класса
+    for i in range(1,n+1):
+        setattr(obj, f'attribute{i}', f'value{i}') # создание нового атрибута
+    return obj
