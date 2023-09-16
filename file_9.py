@@ -1,38 +1,74 @@
-# Перед вами имеется реализация класса RobotVacuumCleaner. Сейчас над каждым методом стоит знак _.
-# Ваша задача сделать код корректным, для это нужно заменить знак _ на один из декораторов @staticmethod, @classmethod и @property или же просто удалить знак
+# class MyClass:
+#     class_attribute = "I am a class attribute"
 
-class RobotVacuumCleaner:
-    name = 'Henry'
-    charge = 25
+#     def __init__(self):
+#         self.instance_attribute = "I am an instance attribute"
 
-    # _
-    def update_charge(cls, new_value):
-        cls.charge = new_value
 
-    # _
-    def hello(name):
-        return f'Привет, {name}'
+# example = MyClass()
+# print(example.class_attribute)
 
-    # _
-    def data(self):
-        return {
-            'name': self.name,
-            'charge': self.charge
-        }
 
-    # _
-    def make_clean(self):
-        if self.charge < 30:
-            return 'Кожаный, заряди меня! Я слаб'
-        return 'Я вычищу твою берлогу!!!'
+# class MyClass:
+#     class_attribute = "I am a class attribute"
 
-# код ниже не нужно удалять, в нем находятся проверки
-print(RobotVacuumCleaner.hello('Господин'))
-RobotVacuumCleaner.update_charge(50)
+#     def __init__(self):
+#         self.instance_attribute = "I am an instance attribute"
 
-robot = RobotVacuumCleaner()
-print(robot.make_clean())
-print(robot.data)
 
-RobotVacuumCleaner.update_charge(False)
-print(robot.make_clean())
+# example_1 = MyClass()
+# example_2 = MyClass()
+# example_3 = MyClass()
+
+# example_1.class_attribute = "Class attribute modified"
+
+# print(example_1.class_attribute)
+# print(example_2.class_attribute)
+# print(example_3.class_attribute)
+
+
+
+
+# class MyClass:
+#     class_attribute = "I am a class attribute"
+
+#     def __init__(self):
+#         self.instance_attribute = "A"
+
+#     @staticmethod
+#     def change(new_value):
+#         MyClass.class_attribute = new_value
+
+
+# example_1 = MyClass()
+# example_2 = MyClass()
+# example_3 = MyClass()
+
+# example_1.change("j")
+
+# print(example_1.class_attribute)
+# print(example_2.class_attribute)
+# print(example_3.class_attribute)
+
+
+
+class MyClass:
+    class_attribute = "I am a class attribute"
+
+    def __init__(self):
+        self.instance_attribute = "I am an instance attribute"
+
+    @classmethod
+    def create_attr(cls, attr_name, attr_value):
+        setattr(cls, attr_name, attr_value)
+
+
+example_1 = MyClass()
+example_2 = MyClass()
+example_3 = MyClass()
+
+example_1.create_attr('new_attr', "Hello world")
+
+print(example_1.new_attr)
+print(example_2.new_attr)
+print(example_3.new_attr)
