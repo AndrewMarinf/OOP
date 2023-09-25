@@ -27,11 +27,10 @@ class User:
         with open('pass.txt','r') as pas: # откройте файл в режиме чтения
             # word = pas.read().split() # можно без split # прочитать содержимое файла и разбиваем
             if password in pas.read():  # пишем read(), а то читать не будет !!!!!! ,word тогда надо сюда писать # проверьте, присутствует ли слово или нет
-                print('Уже есть такой пароль')
-            else:
-                print('Нет такого пароля')
+                return True
+            return False
         
-    @property.setter # это SET (установка значение) это нужно чтобы защитить и удобно вызывать 
+    @password.setter # это SET (установка значение) это нужно чтобы защитить и удобно вызывать 
     def password(self,value):
         if not isinstance(value,str): # если тип нашего значения не пренадлежит str
             raise TabError('Пароль должен быть стракой') # то вызываем исключение
@@ -41,7 +40,11 @@ class User:
             raise ValueError('Длина пароля слишком велика')
         elif not User.is_include_number(value): # если функция не сработала и верне False 
             raise TabError('Пароль должен содержать хотябы одну цифру')
+        elif User.ppassword_verification(value):      #!!!!!!!!!!!!!!!!!!!!!!!!!!!! тут новый код 
+            raise TabError('Популярный пароль ')
+        
         self.__password = value # эта строчка не запишиться никогда
 
 
 
+A = User('Ivan','123123')
