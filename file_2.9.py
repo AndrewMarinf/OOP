@@ -1,54 +1,54 @@
-# class MyClass:
-#     class_attribute = "I am a class attribute"
+class MyClass:
+    class_attribute = "I am a class attribute"
 
-#     def __init__(self):
-#         self.instance_attribute = "I am an instance attribute"
-
-
-# example = MyClass()
-# print(example.class_attribute)
+    def __init__(self):
+        self.instance_attribute = "I am an instance attribute"
 
 
-# class MyClass:
-#     class_attribute = "I am a class attribute"
-
-#     def __init__(self):
-#         self.instance_attribute = "I am an instance attribute"
+example = MyClass()
+print(example.class_attribute)
 
 
-# example_1 = MyClass()
-# example_2 = MyClass()
-# example_3 = MyClass()
+class MyClass:
+    class_attribute = "I am a class attribute"
 
-# example_1.class_attribute = "Class attribute modified"
-
-# print(example_1.class_attribute)
-# print(example_2.class_attribute)
-# print(example_3.class_attribute)
+    def __init__(self):
+        self.instance_attribute = "I am an instance attribute"
 
 
+example_1 = MyClass()
+example_2 = MyClass()
+example_3 = MyClass()
+
+example_1.class_attribute = "Class attribute modified"
+
+print(example_1.class_attribute)
+print(example_2.class_attribute)
+print(example_3.class_attribute)
 
 
-# class MyClass:
-#     class_attribute = "I am a class attribute"
-
-#     def __init__(self):
-#         self.instance_attribute = "A"
-
-#     @staticmethod
-#     def change(new_value):
-#         MyClass.class_attribute = new_value
 
 
-# example_1 = MyClass()
-# example_2 = MyClass()
-# example_3 = MyClass()
+class MyClass:
+    class_attribute = "I am a class attribute"
 
-# example_1.change("j")
+    def __init__(self):
+        self.instance_attribute = "A"
 
-# print(example_1.class_attribute)
-# print(example_2.class_attribute)
-# print(example_3.class_attribute)
+    @staticmethod
+    def change(new_value):
+        MyClass.class_attribute = new_value
+
+
+example_1 = MyClass()
+example_2 = MyClass()
+example_3 = MyClass()
+
+example_1.change("j")
+
+print(example_1.class_attribute)
+print(example_2.class_attribute)
+print(example_3.class_attribute)
 
 
 
