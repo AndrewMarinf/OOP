@@ -14,7 +14,7 @@ for i in inp:
         d[city] = [street] # ковычки для того чтобы значения были списком, без них будет будет через запитую
 print(d)        
                
-
+# так должно было быть
 #res = {
 #    'Moscow': ['Trubnaya street', 'Lenin Street'],
 #    'Barcelona': ['Paseo de Gracia']
