@@ -1,40 +1,39 @@
-class Customer:
-    def __init__(self,name,balance = 0) -> None:
-        self.name = name 
-        self.balance = balance
 
-    @staticmethod
-    def check_type(value):
-        if not isinstance(value,(int,float)):
-            raise TabError('Банк работает только с числами')
+# КОД не пошел 
+# class Customer:
+#     def __init__(self,name,balance = 0) -> None:
+#         self.name = name 
+#         self.balance = balance
 
-    def withdraw(self,value):
-        if not self.check_type(value):
-            if self.balance > 0:
-                self.balance - value
-            raise ValueError('Сумма списания превышает баланс')
+#     @staticmethod
+#     def check_type(value):
+#         if not isinstance(value,(int,float)):
+#             raise TabError('Банк работает только с числами')
 
-    def deposit(self,value):
-        if not self.check_type(value):
-            self.balance + value
+#     def withdraw(self,value):
+#         if not Customer.check_type(value) and self.balance > 0:
+#             # if self.balance > 0:
+#                 self.balance - value
+#         else:     
+#             raise ValueError('Сумма списания превышает баланс')
+
+#     def deposit(self,value):
+#         if not Customer.check_type(value):
+#             self.balance + value
                 
+# # Ниже код для проверки класса Customer   
 
-# Ниже код для проверки класса Customer   
+# assert Customer.check_type(2) is None, 'Метод check_type не должен ничего возращать'
+# assert Customer.check_type(2.5) is None, 'Метод check_type не должен ничего возращать'
 
+# for i in ['hello', [1, 2, 3], dict(), set()]:
+#     try:
+#         Customer.check_type(i)
+#     except TypeError as error:
+#         print(error)
+#     else:
+#         raise TypeError(f'Метод check_type должен вызывать ошибку если передать {i}')
 
-assert Customer.check_type(2) is None, 'Метод check_type не должен ничего возращать'
-assert Customer.check_type(2.5) is None, 'Метод check_type не должен ничего возращать'
-
-
-for i in ['hello', [1, 2, 3], dict(), set()]:
-    try:
-        Customer.check_type(i)
-    except TypeError as error:
-        print(error)
-    else:
-        raise TypeError(f'Метод check_type должен вызывать ошибку если передать {i}')
-
-print('good')
 # bob = Customer('Bob Odenkirk')
 # assert bob.balance == 0
 # assert bob.name == 'Bob Odenkirk'
@@ -80,3 +79,4 @@ print('good')
 # else:
 #     raise ValueError("Проверьте списание при превышении лимита")
 # assert terk.balance == 0
+
