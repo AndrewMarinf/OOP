@@ -36,7 +36,7 @@ def find_subgeneral_variance(x, x_average):
 def get_sqrt(x):
     return x ** 0.5
 
-# Для подзабывших питон шпаргалка:
+Для подзабывших питон шпаргалка:
 
 import statistics
 
@@ -50,3 +50,19 @@ print(variance, statistics.variance(ls))
 
 stdev = variance ** (1 / 2)
 print(stdev, statistics.stdev(ls))
+
+import numpy as np
+from scipy import stats
+
+data = input().split()
+data = np.array(data, dtype=int)
+print(data)
+
+M = np.mean(data)  # среднее сзначение
+mode = stats.mode(data)   # мода
+median = np.median(data)  # медиан
+R = np.max(data) - np.min(data)  # размах
+D = np.var(data)  # дисперсия
+sd = np.std(data)  # стандартное отклонение
+
+print(f'Среднее значение: {M}, мода: {mode[0]}, медиан: {median}, размах: {R}, дисперсия: {D}, стандартное отклонение: {sd}')
