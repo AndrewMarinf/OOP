@@ -80,3 +80,14 @@ class Location:
     latitude: int = 11.5
 
 stonehenge = Location( name='Stonehenge', longitude=51, latitude=1.5)
+
+
+
+from enum import Enum
+
+class Size(Enum):
+    S = 'small'
+    M = 'medium'
+    L = 'large'
+    XL = 'extra large'
+    XXL = 'extra extra large'
