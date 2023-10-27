@@ -177,10 +177,10 @@ def func(arg):
 print(func(const_products))
 
 
-# def func(arg):
-#     mass = []
-#     for l in arg:
-#         mass.append((l.get("name")))
-#         for v in l["reviews"]: 
-#             mass.append((v['rating']))
-#     return mass
+def func(arg):
+    mass = []
+    for l in arg:
+        mass.append((l.get("name")))
+        for v in l["reviews"]: 
+            mass.append((v['rating']))
+    return mass
