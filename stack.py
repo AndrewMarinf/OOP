@@ -42,3 +42,6 @@ class Stack:
     "метод size() возвращает количество элементов в стеке. Параметры не требуются, тип результата - целое число."
     def size(self):
         return len(self.values)      
+    
+    def pas(self):
+        pass
