@@ -184,3 +184,4 @@ def func(arg):
         for v in l["reviews"]: 
             mass.append((v['rating']))
     return mass
+    return pa
