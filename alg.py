@@ -97,9 +97,6 @@ for key in account.keys():
 print(l)         
 
 
-
-
-
 from collections import Counter
 a = [{'Петя': 6, 'Вася': 8, 'Дима': 11, 'Юля': 3}, 
      {'Петя': 5, 'Вася': 36, 'Дима': 4, 'Юля': 8}, 
@@ -110,8 +107,6 @@ for d in a:
     print(d)
     c.update(d)
 print(c) 
-
-
 
 
 
