@@ -44,4 +44,5 @@ class Stack:
         return len(self.values)      
     
     def pas(self):
-        pass
+        return 'pass'
+        
