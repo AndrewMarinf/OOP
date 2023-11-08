@@ -36,7 +36,7 @@ def find_subgeneral_variance(x, x_average):
 def get_sqrt(x):
     return x ** 0.5
 
-Для подзабывших питон шпаргалка:
+# Для подзабывших питон шпаргалка:
 
 import statistics
 
