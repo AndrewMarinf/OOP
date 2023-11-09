@@ -267,7 +267,7 @@ class TaskList:
         self.tasks.remove(b)
 
 class TaskManager:
-    def __init__(self,) -> None:
+    def __init__(self,) -> str:
         pass
 
 # ==============================================================================================
